@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+}
+img, video, iframe {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+main {
+    display: flex;
+    max-height: 100vh;
+}
+main .left, main .right {
+    flex: 1;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+.left {
+    background-image: url(./zuks-house.webp);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.right {
+    display: flex;
+    flex-direction: column;
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    /* max-height: 100vh; */
+    /* flex: 2; */
+}
+.random {
+    transition: all .5s;
+}
+.right > .col-child {
+    border: 1px solid;
+    flex: 1;
+}
+ .col-child.a {
+    /* border: 10px solid red; */
+    order: 0;
+    flex-grow: 2;
+
+}
+ .col-child.b {
+    /* border: 10px solid green; */
+    order: 1;
+    flex-grow: 1;
+}
+.col-child.c {
+    /* border: 10px solid yellow; */
+    order: 3;
+    flex-grow: 3;
+}
+.multi-images {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.first-row .two-images{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/* .first-row {
+    border: 1px solid red; */
+}
+.child-bg-img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* child-bg-img starts */
+
+.child-bg-img.x {
+    /* background-image: url(https://placehold.co/100x1000) !important; */
+    /* background-image: linear-gradient(red, blue) !important; */
+}
+.child-bg-img.y {
+    background-image: url(army1@300x.png) !important;
+}
+.child-bg-img.z {
+    background-image: url(helmet@300x.png) !important;
+    background-repeat: repeat !important;
+}
+
+/* .child-bg-img.a {
+    opacity: .1; */
+}
+/* .child-bg-img.b {
+    opacity: .5;
+} */
+/* .child-bg-img.c {
+    opacity: .7; */
+
+}
+
+.child-bg-img.one {
+    background-size: contain;
+}
+.child-bg-img.two {
+    background-size: cover;
+}
+.child-bg-img.three {
+    background-size: 50%;
+}
+
+/* child-bg-img ends */
