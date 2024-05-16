@@ -1,7 +1,7 @@
 /* setup project */
 
 body {
-    background-color: bisque;
+    background-color: whitesmoke;
     margin:20px;
   }
   
@@ -15,7 +15,10 @@ body {
   
   /* typography */
   
-  
+  div.xltext {
+    font-size: 40pt;
+  }
+
   div.largetext {
     font-size:10vw;
     line-height:8vw;
@@ -30,14 +33,31 @@ body {
     font-size:16px;
     line-height:18px;
   }
+
+  div.tinytext {
+    font-size: 7pt;
+  }
   
   div.sans {
-    font-family: arial;
-    font-weight: bold;
+    font-family: helvetica;
+    font-weight: medium;
   }
   
   div.serif {
     font-family: times;
+  }
+
+  div.caps {
+    
+  }
+
+  div.justify {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  div.mono {
+    font-family: monospace;
   }
   
   /* colours */
@@ -52,6 +72,10 @@ body {
   
   div.bgblue {
     background-color: blue;
+  }
+
+  div.bgblack {
+    background-color: black;
   }
   
   /* layout */
@@ -77,3 +101,52 @@ body {
   }
   
   /* design */
+
+  /* one class method */
+
+  div.scrollingtext {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: light;
+    font-size: 21px;
+    background-color: black;
+    color: white;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  div.title {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 110pt;
+    line-height: 110pt;
+  }
+
+  div {
+    box-sizing:border-box;
+  }
+  
+  div.container {
+    display:flex;
+  }
+  
+  div.item {
+    padding-left:40px;
+    padding-right:40px;
+    padding-top:10px;
+    padding-bottom:10px;
+    width:50%;
+    height:100vh;
+    overflow:scroll;
+  }
+  
+  div.left {
+    background-color:whitesmoke;
+    margin-left: -50px;
+  } 
+  
+  div.right {
+    background-color: whitesmoke;
+    flex-wrap: wrap;
+
+  }
