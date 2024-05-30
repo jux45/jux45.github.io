@@ -1,10 +1,14 @@
 /* setup project */
+@font-face {
+  font-family: 'editorial';
+  src: url(PPEditorialNew-Regular.woff);
+}
 
-body {
-    background-color: whitesmoke;
-    margin:20px;
-  }
-  
+@font-face {
+  font-family: 'editorial-italic';
+  src: url(PPEditorialNew-Italic.woff);
+}
+
   div {
     box-sizing:border-box;
   }
@@ -14,14 +18,25 @@ body {
   }
   
   /* typography */
+
+  div.editorial {
+    font-family: 'editorial';
+    font-size: 22pt;
+    margin-left: 10pt;
+  }
+
+  div.editorialitalic {
+    font-family: 'editorial-italic';
+    font-size: 18pt;
+  }
   
   div.xltext {
     font-size: 40pt;
   }
 
   div.largetext {
-    font-size:10vw;
-    line-height:8vw;
+    font-size:29pt;
+    line-height:32pt;
   }
   
   div.mediumtext {
@@ -30,12 +45,12 @@ body {
   }
   
   div.smalltext {
-    font-size:16px;
-    line-height:18px;
+    font-size:14pt;
+    line-height:16pt;
   }
 
   div.tinytext {
-    font-size: 7pt;
+    font-size: 6pt;
   }
   
   div.sans {
@@ -47,6 +62,22 @@ body {
     font-family: times;
   }
 
+  div.mono {
+    font-family: monospace;
+  }
+
+  div.italic {
+    font-style: italic;
+  }
+
+  div.centred {
+    text-align: center;
+  }
+
+  div.indent {
+    text-indent: 40pt;
+  }
+
   div.caps {
     
   }
@@ -54,6 +85,13 @@ body {
   div.justify {
     text-align: justify;
     text-justify: inter-word;
+    letter-spacing: -1px;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    -webkit-hyphenate-limit-before: 3; /* For Safari */
+    -webkit-hyphenate-limit-after: 4; /* For Safari */
+    hyphenate-limit-chars: 10 3 4; 
   }
 
   div.mono {
@@ -62,8 +100,8 @@ body {
   
   /* colours */
   
-  div.blue {
-    color:blue;
+  div.purple {
+    color:#6300f8;
   }
   
   div.white {
@@ -77,6 +115,29 @@ body {
   div.bgblack {
     background-color: black;
   }
+
+  div.bggreen {
+    background-color: #00ff00;
+  }
+
+  div.gradpurple {
+    background: rgb(159,43,224);
+    background: linear-gradient(0deg, rgba(159,43,224,1) 60%, rgba(255,255,255,0) 100%);
+  }
+
+  div.bggrey {
+    background-color: #c2bec7;
+    margin: 10pt;
+  }
+
+  div.gradgreen {
+    background: rgb(0,255,0);
+    background: linear-gradient(0deg, rgba(0,255,0,1) 60%, rgba(255,255,255,0) 100%);
+  }
+
+  div.multiply {
+      mix-blend-mode: multiply;
+  }
   
   /* layout */
   
@@ -85,10 +146,10 @@ body {
     padding:5px;
   }
   
-  div.w50 {
-    width: 50%;
-    padding:5px;
-  }
+div.w50 {
+  width: 50%;
+  padding: 5px;
+}
   
   div.w33 {
     width: 33.333%;
@@ -99,27 +160,95 @@ body {
     width: 25%;
     padding:5px;
   }
+
+  div.margintop150 {
+    margin-top: 150px;
+  }
+
+  div.margintop75 {
+    margin-top: 75px;
+  }
+
+  div.paddingtop75 {
+    padding-top: 75px;
+  }
+
+  div.paddingtop25 {
+    padding-top: 25px;
+  }
+
+  div.marginqtr {
+    margin-left: 25%;
+  }
+
+  div.marginhalf {
+    margin-left: 50%;
+  }
+
+  div.margin5 {
+    margin-left: 5pt
+  }
+
+  div.curved {
+    border-radius: 50px;
+  }
   
+  div.curvedimg img {
+    border-radius: 50px;
+    border: 5px solid #c2bec7;
+    margin: 5px;
+    
+  }
+
   /* design */
 
   /* one class method */
 
+  div.scroll{
+    background:black;
+    color:white;
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+    left:0px;
+    width: 100%;
+    animation: backgroundcolor 2s infinite linear alternate;
+  }
+  
   div.scrollingtext {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: light;
     font-size: 21px;
     background-color: black;
     color: white;
-    margin-top: -20px;
+    /* margin-top: -20px;
     margin-left: -20px;
-    margin-right: -20px;
+    margin-right: -20px; */
+    white-space: nowrap; 
+    animation: movingtext 20s infinite linear;
+  }
+  
+  @keyframes movingtext{
+    0% { 
+      translate:100%;
+    }
+    100%{
+      translate:-100%;
+    }
   }
 
   div.title {
-    font-family: 'Times New Roman', Times, serif;
+    margin-top: 40px;
     color: black;
-    font-size: 110pt;
-    line-height: 110pt;
+    height: 25vw;
+    /* background-image: url("./images/worm@300x.png"); */
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top right;
+
   }
 
   div {
@@ -128,25 +257,44 @@ body {
   
   div.container {
     display:flex;
+    flex-wrap:wrap;
   }
   
   div.item {
-    padding-left:40px;
+    /* padding-left:40px;
     padding-right:40px;
     padding-top:10px;
-    padding-bottom:10px;
+    padding-bottom:10px; */
     width:50%;
     height:100vh;
     overflow:scroll;
   }
   
   div.left {
-    background-color:whitesmoke;
-    margin-left: -50px;
+    /* background-color:whitesmoke; */
+    /* margin-left: -10px; */
+    /* padding-left: -5px; */
   } 
   
   div.right {
-    background-color: whitesmoke;
     flex-wrap: wrap;
+    /* padding-left: 10px; */
+  }
 
+  div.margin50 {
+    margin-left: 50%;
+  }
+
+  div.h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    font-weight: bolder;
+    text-align: center;
+    background-color: white;
+    border: 5px solid black;
+    margin-bottom: 10px;
+    border-radius: 35px;
+    padding: 10px;
+    width: fit-content;
+    block-size: fit-content;
   }
