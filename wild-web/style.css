@@ -9,11 +9,22 @@
   src: url(PPEditorialNew-Italic.woff);
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+
   div {
     box-sizing:border-box;
   }
   
   img {
+    width:100%;
+  }
+
+  video {
     width:100%;
   }
   
@@ -22,8 +33,10 @@
   div.editorial {
     font-family: 'editorial';
     font-size: 22pt;
-    margin-left: 10pt;
+    margin-left: 5pt;
   }
+
+  div.
 
   div.editorialitalic {
     font-family: 'editorial-italic';
@@ -55,7 +68,18 @@
   
   div.sans {
     font-family: helvetica;
-    font-weight: medium;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+  }
+
+  div.sans2 {
+    font-family: helvetica;
+    font-weight: bold;
+    letter-spacing: -0.75px;
+  }
+
+  div.tight {
+    letter-spacing: -0.5px;
   }
   
   div.serif {
@@ -169,6 +193,10 @@ div.w50 {
     margin-top: 75px;
   }
 
+  div.margintop50 {
+    margin-top: 50px;
+  }
+
   div.paddingtop75 {
     padding-top: 75px;
   }
@@ -197,7 +225,12 @@ div.w50 {
     border-radius: 50px;
     border: 5px solid #c2bec7;
     margin: 5px;
-    
+  }
+
+  div.curvedimg video {
+    border-radius: 50px;
+    border: 5px solid black;
+    margin: 5px;
   }
 
   /* design */
@@ -254,6 +287,8 @@ div.w50 {
   div {
     box-sizing:border-box;
   }
+
+
   
   div.container {
     display:flex;
@@ -268,6 +303,7 @@ div.w50 {
     width:50%;
     height:100vh;
     overflow:scroll;
+    padding-top: 40px;
   }
   
   div.left {
@@ -297,4 +333,136 @@ div.w50 {
     padding: 10px;
     width: fit-content;
     block-size: fit-content;
+    letter-spacing: -1px;
+  }
+
+  div.h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40pt;
+    font-weight: bolder;
+    text-align: center;
+    background-color: white;
+    border: 8px solid black;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    padding: 10px;
+    width: fit-content;
+    block-size: fit-content;
+    letter-spacing: -1px;
+  }
+
+  div.h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    background-color: white;
+    border: 8px solid black;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    padding: 10px;
+    width: fit-content;
+    block-size: fit-content;
+    letter-spacing: -1px;
+    font-size: 30pt;
+  }
+
+  div.overlay1 {
+    background-image: url("images/overlay.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  div.overlay2 {
+    background-image: url("images/worm-2.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+
+  div.overlay3 {
+    background-image: url("images/overlay-3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  div.overlay4 {
+    background-image: url("images/overlay-4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  div.overlay5 {
+    background-image: url("images/overlay-5.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  div.overlay6 {
+    background-image: url("images/overlay-6.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  div.overlay7 {
+    background-image: url("images/overlay-7.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  div.overlay8 {
+    background-image: url("images/overlay-8.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+  }
+
+  div.overlay9 {
+    background-image: url("images/overlay-9.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+  }
+
+  div.overlay10 {
+    background-image: url("images/overlay-10.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+  }
+
+  div.worm3 {
+    background-image: url("images/worm-3.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    /* mix-blend-mode:exclusion; */
+  }
+
+  div.worm5 {
+    background-image: url("images/worm-5_1.svg");
+    background-size:cover;
+    background-repeat: no-repeat;
+  }
+
+  div.worm6 {
+    background-image: url("images/worm-6_1.svg");
+    background-size:auto;
+    background-repeat: no-repeat;
+  }
+
+  div.cells {
+    background-image: url(images/nose.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    mix-blend-mode: difference;
+  }
+
+  div.title2 {
+    font-size: 11.3vw;
+    /* width: 100%; */
+    height: 11.3vw;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: editorial;
+    /* letter-spacing: -1.5pt; */
+  }
+
+  div.phone {
+    margin-left: auto;
+    margin-right: auto;
   }
