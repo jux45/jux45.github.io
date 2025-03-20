@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Define the custom font (Burra/GoodSans-Regular) */
+        @font-face {
+            font-family: 'GoodSans';
+            src: url('https://yourgithubrepo.com/path/to/Burra/GoodSans-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Apply custom font and make the text all uppercase */
+        .custom-font {
+            font-family: 'GoodSans', sans-serif;
+            text-transform: uppercase;
+            line-height: 16.8px;
+        }
+
+        /* Simple table layout */
+        .signature-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        /* Vertical Line Style */
+        .divider {
+            width: 2px;
+            background-color: #333;
+            height: 70px;
+        }
+
+        /* Content cell styling */
+        .contact-info {
+            font-family: 'GoodSans', sans-serif;
+            font-size: 13.25px;
+            color: #333;
+        }
+
+        .signature-text {
+            font-family: 'GoodSans', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #333;
+        }
+    </style>
+    <title>Email Signature</title>
+</head>
+<body>
+    <table class="signature-table">
+        <!-- Name & Title Row -->
+        <tr>
+            <td colspan="3" style="text-align: left; padding-bottom: 8px;">
+                <div class="signature-text"><strong>Sean McKenna</strong></div>
+                <div class="signature-text">Director</div>
+            </td>
+        </tr>
+
+        <!-- Main Content Row (Logo, Line, Contact Info) -->
+        <tr>
+            <td valign="top" style="padding-right: 10px;">
+                <!-- Logo -->
+                <img src="https://raw.githubusercontent.com/jux45/jux45.github.io/refs/heads/main/Burra/Burra-Logo-Green.png"
+                     alt="Burra Commercial Contractors Logo" width="285">
+            </td>
+            <td valign="top" style="padding-left: 10px;">
+                <!-- Vertical Line -->
+                <div class="divider"></div>
+            </td>
+            <td valign="top" class="contact-info">
+                <span style="color: #555;">P&nbsp;&nbsp;&nbsp;0427388227 </span><br>
+                E&nbsp;&nbsp;&nbsp;sam@burracommercial.com.au<br>
+                A&nbsp;&nbsp;&nbsp;PO Box 8227 – Newtown, 3220 Victoria<br>
+                <a href="https://www.burracommercial.com.au/" style="color: #565e45; text-decoration: none;">burracommercial.com.au</a><br>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
