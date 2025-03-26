@@ -18,64 +18,117 @@
             text-transform: uppercase;
             line-height: 16.8px;
         }
+        
+        /* General styling for the container */
+        .signature-container {
+            width: 100%;
+            font-family: 'GoodSans', sans-serif;
+        }
 
-        /* Simple table layout */
+        /* Table for structure */
         .signature-table {
             width: 100%;
             border-collapse: collapse;
         }
 
-        /* Vertical Line Style */
-        .divider {
-            width: 2px;
-            background-color: #333;
-            height: 70px;
-        }
-
-        /* Content cell styling */
-        .contact-info {
-            font-family: 'GoodSans', sans-serif;
-            font-size: 13.25px;
-            color: #333;
-        }
-
-        .signature-text {
-            font-family: 'GoodSans', sans-serif;
+        /* Name & Title Styling */
+        .signature-name {
             font-size: 14px;
             text-transform: uppercase;
             color: #333;
+            padding-bottom: 2px;
         }
+
+        .signature-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #333;
+            /* padding-bottom: 50px; */
+        }
+
+        .signature-license {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-style: italic;
+            color: #545E42;
+            padding-bottom: 50px;
+        }
+
+        /* Logo Styling */
+        .logo {
+            width: 285px;
+            padding-right: 10px;
+        }
+
+        /* Vertical Line Styling */
+        .divider {
+            width: 0.5px;
+            background-color: #333;
+            height: 60px;
+        }
+
+        /* Contact Info Styling */
+        .contact-info {
+            font-size: 13.25px;
+            color: black;
+            padding-left: 10px;
+            text-transform: uppercase;
+            /* vertical-align: top; Aligns content to the top */
+            /* padding-top: 10.5px; Adjust this value as needed */
+            line-height: 11pt;
+        }
+
+        /* Image Styling */
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Adjust links for better visibility */
+        a {
+            color: #545E42;
+            text-decoration: none;
+        }
+
     </style>
     <title>Email Signature</title>
 </head>
 <body>
-    <table class="signature-table">
-        <!-- Name & Title Row -->
-        <tr>
-            <td colspan="3" style="text-align: left; padding-bottom: 8px;">
-                <div class="signature-text"><strong>Sean McKenna</strong></div>
-                <div class="signature-text">Director</div>
-            </td>
-        </tr>
+    <div class="signature-container">
+        <table class="signature-table">
+            <!-- Name & Title Row -->
+            <tr>
+                <td colspan="3">
+                    <div class="signature-name" style="padding-bottom: 0px"><strong>Sam Ballantyne</strong></div>
+                    <div class="signature-title">Director</div>
+                    <div class="signature-license">CB-L 100337</div>
+                </td>
+            </tr>
 
-        <!-- Main Content Row (Logo, Line, Contact Info) -->
-        <tr>
-            <td valign="top" style="padding-right: 10px;">
-                <!-- Logo -->
-                <img src="https://raw.githubusercontent.com/jux45/jux45.github.io/refs/heads/main/Burra/Burra-Logo-Green.png"
-                     alt="Burra Commercial Contractors Logo" width="285">
-            </td>
-            <td valign="top" style="padding-left: 10px;">
-                <!-- Vertical Line -->
-                <div class="divider"></div>
-            </td>
-            <td valign="top" class="contact-info">
-                <span style="color: #555;">P&nbsp;&nbsp;&nbsp;0427388227 </span><br>
-                E&nbsp;&nbsp;&nbsp;sam@burracommercial.com.au<br>
-                A&nbsp;&nbsp;&nbsp;PO Box 8227 – Newtown, 3220 Victoria<br>
-                <a href="https://www.burracommercial.com.au/" style="color: #565e45; text-decoration: none;">burracommercial.com.au</a><br>
-            </td>
-        </tr>
-    </table>
+            <!-- Main content Row (Logo, Divider, Contact Info) -->
+            <tr>
+                <td class="logo" style="vertical-align: middle;">
+                    <img src="https://raw.githubusercontent.com/jux45/jux45.github.io/refs/heads/main/Burra/Burra-Logo-Green.png"
+                         alt="Burra Commercial Contractors Logo">
+                </td>
+                <td class="divider" style="vertical-align: middle;"></td>
+                <td class="contact-info" style="vertical-align: middle;">
+                    <span style="color;">P&nbsp;&nbsp;&nbsp;0427388227 </span><br>
+                    E&nbsp;&nbsp;&nbsp;<span style="text-decoration: none; color: black;">SAM@BURRACOMMERCIAL.COM.AU</span><br>
+                    A&nbsp;&nbsp;&nbsp;70 CAMBRIDGE ST, COLLINGWOOD<br>
+                    <a href="https://www.burracommercial.com.au/">BURRACOMMERCIAL.COM.AU</a><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3" style="font-size: 9pt; color: #545E42; font-family: 'GoodSans', sans-serif; text-transform: uppercase; padding-top: 15px; line-height: 11.5px;">
+                    This email is private, confidential and intended solely for the addressed recipient(s). <br> 
+                    If this email has been sent to you in error, please immediately delete and destroy it and contact the sender.
+                </td>
+            </tr>
+            
+        </table>    
+    </div>
 </body>
 </html>
